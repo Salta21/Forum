@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forum</title>
+    <link rel = "stylesheet" href="/style/signup.css">
+    <link rel="icon" href="/img/icon.svg" type="images/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+      <div class="top-design">
+          <a class = "homelink" href="/home">Home</a>
+          <a class = "login-button" href="/signin">Sign in</a>
+      </div> 
+    <div class="quarter-back">
+          <div class = "intro-text">
+                    Please fill out the form below to create an account
+          </div>
+           <div class = "error-message">
+      {{ .Erstring }}
+          </div>
+            <form action="/signup" method="post">
+                <div class = "signup-box">
+                  <span class ="authorization">Username</span>
+                  <input type="text" placeholder="Enter username" name="username" id="username"required pattern="^[A-Za-z][A-Za-z0-9_]{5,30}$" title = "A username must contain: only Latin letters; start with an alphabet; all other characters can be alphabets, numbers or an underscore; length constraint of the username is 6-30.">
+                  <span class ="authorization">Email</span>
+                  <input type="text" placeholder="Enter email" name="email" id="email" title = "Please use a valid email address"required>
+                  <span class="authorization">Password</span>
+                  <input type="password" placeholder="Enter password" name="password" id="psw"title = "A password must contain: at least one uppercase Latin letter; at least one lowercase Latin letter; at least one digit; at least one special character; at least 6 characters long; no empty string or whitespace."required>
+                  <div class = "login">
+                    <button type="submit" class="registerbtn">Register</button>
+                  </div>
+                </div>
+            </form>
+</body>
+</html>

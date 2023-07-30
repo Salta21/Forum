@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>profile</title>
+  <link rel="stylesheet" href="/style/profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="icon" href="/img/icon.svg" type="images/x-icon">
+</head>
+<body>
+  <div class="top-design">
+    <a class = "homelink" href="/profile">Home</a>
+    <div class = "profile-info">
+              {{ .Username }}
+              {{ .Email }}
+      </div>   
+       <a class = "login-button" href="/sign-out">Sign out</a>
+  </div> 
+  <div class = "category-buttons">
+    <form action = "/profilecontentdisplay"method="post">
+      <button class="btn fifth" name="buttons"value="sales" type="submit" required>Sales</button>
+      <button class="btn fifth" name="buttons"value="holiday" type="submit" required>Holidays</button>
+      <button class="btn fifth" name="buttons"value="facts" type="submit" required>Facts</button>
+      <button class="btn fifth" name="buttons"value="events" type="submit" required>Events</button>
+      <button class="btn fifth" name="buttons"value="quotes" type="submit" required>Quotes</button>
+      <button class="btn fifth" name="buttons"value="books" type="submit" required>Books</button>
+      <button class="btn fifth" name="buttons"value="guidesandtips" type="submit" required>Guides </button>
+    </form>
+    <div class = "buttonTop">
+      <form action="/created-posts" method="post">
+        <button  class = "createdPost" name="buttons" value="createdposts" type="submit"required>Created posts</button>
+    </form>
+    <form action = "/liked-posts" method="post">
+        <button class = "createdPost" name="buttons"value="likedposts" type="submit"required>Liked posts</button>
+    </form>
+    </div>
+  </div>
+  <div class = "error-message">
+      {{ .Erstring }}
+  </div>
+  <form action="/profile" method="post">
+    <div class="make-post-design">
+      <div class = "label">Category</div>
+      <div class = "content-select"> 
+        <p><input type = "checkbox" name="content" id="sales" value="sales"/>Sales</p>
+        <p><input type = "checkbox" name="content" id="holiday" value="holiday"/>Holidays</p>
+        <p><input type = "checkbox" name="content" id="facts" value="facts"/>Facts</p>
+        <p><input type = "checkbox" name="content" id="events" value="events"/>Events</p>
+        <p><input type = "checkbox" name="content" id="quotes" value="quotes"/>Quotes</p>
+        <p><input type = "checkbox" name="content" id="books" value="books"/>Books</p>
+        <p><input type = "checkbox" name="content" id="guidesandtips" value="guidesandtips"/>Guides</p>
+      </div>
+      <div class = "label">Title</div>
+      <div class = "textarea">
+        <textarea name="title" placeholder="Creating a Title..."></textarea>
+      </div>
+      <div class = "label">Post</div>
+      <div class = "textarea">
+      <textarea name="mypost" placeholder="Creating a Forum Post..."></textarea>
+      </div>
+      <div class = "login">
+        <input type="submit" value="Post"/>
+      </div>
+    </div>
+  </form>
+    {{range .Post}}
+  <div class="post-container">
+    <div class = "title"> 
+      {{.Title}}
+     </div>        
+     <div class="image-author-location">
+      <img class = "post-avatar"src="/img/person.svg">
+      <span class = "author">
+        {{.Author}}
+      </span>
+  </div>
+      <div class="posts">
+        {{.Posts}}
+      </div>
+          <a class = "more-link" href="/moreinfo/?id={{ .Post_id}}">
+            more
+            </a>
+  </div>
+  {{end}}
+</body>
+</html>

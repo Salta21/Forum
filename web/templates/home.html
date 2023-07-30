@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>home</title>
+  <link rel="stylesheet" href="/style/home.css">
+  <link rel="icon" href="/img/icon.svg" type="images/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form action="/home" method="post">
+    <div class="top-design">
+      <a class = "homelink" href="/home">Home</a>
+      <a class = "login-button" href="/signup">Sign up</a>
+      <a class = "login-button-2" href="/signin">Sign in</a>
+    </div>
+        <div class="quarter-back">
+          <!-- <img class = "profile-icon"src="/img/person.svg"> -->
+        </div>
+        <div class = "category-buttons">
+            <button class="btn fifth" name = "content"  value="sales" type="submit">Sales</button>
+            <button class="btn fifth" name = "content"  value="holiday" type="submit">Holiday</button>
+            <button class="btn fifth" name = "content" value="facts" type="submit">Facts</button>
+            <button class="btn fifth" name = "content" value="events" type="submit">Events</button>
+            <button class="btn fifth" name = "content" value="quotes" type="submit">Quotes</button>
+            <button class="btn fifth" name = "content" value="books" type="submit">Books</button>
+            <button class="btn fifth" name = "content" value="guidesandtips" type="submit">Guides </button>
+         </div>
+  </form>
+          {{range .Post}}
+          <div class = "post-container"> 
+               <div class = "title"> 
+                {{.Title}}
+               </div>
+              <div class="image-author-location">
+                <img class = "post-avatar"src="/img/person.svg">
+                  <span class = "author">
+                    {{.Author}}
+                  </span>
+              </div>
+                  <div class="posts">
+                    {{.Posts}}
+                  </div>
+                      <a class = "more-link" href="/displayforunauthorized/?id={{ .Post_id}}">
+                      more
+                      </a>
+          </div>
+          {{end}}
+</body>
+</html>

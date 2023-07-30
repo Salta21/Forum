@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="/style/moreinfo.css">
+    <link rel="icon" href="/img/icon.svg" type="images/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-design">
+    <a class = "homelink" href="/profile">Home</a>
+      <a class = "login-button" href="/sign-out">Sign out</a>
+    </div>
+    <div class = "display-contents">
+      Content: {{range .P.Contents}}
+      {{.}}
+    {{end}}
+    </div>
+    <div class="post-container">
+      <div class = "title"> 
+        {{.P.Title}}
+       </div>        
+       <div class="image-author-location">
+          <img class = "post-avatar"src="/img/person.svg">
+        <span class = "author">
+          {{.P.Author}}
+        </span>
+        </div>
+        <div class="posts">
+          {{.P.Posts}}
+        </div>
+        </div>
+        <div class = "display-like-dislike">
+          <form  action="/likepost"method="post">
+            <div class = "like-dislike-button">
+                  <button type="submit">Like</button>
+            </div>
+                  <input type="hidden" name="user" value="{{.U}}">
+                  <input type="hidden" name="post" value="{{.P.Post_id}}">
+          </form>
+          <span class = "show-like">{{.CountLike}}</span>
+          <form action="/dislikepost"method="post">
+            <div class = "like-dislike-button">
+            <button type="submit">Dislike</button>
+            </div>
+            <input type="hidden" name="user" value="{{.U}}">
+            <input type="hidden" name="post" value="{{.P.Post_id}}">
+          </form>
+        <span class = "show-like"> {{.CountDislike}}</span>
+          </div>
+    <form  action="/commentpost" method="post">
+      <input type="hidden" name="user" value="{{.U}}">
+      <input type="hidden" name="post" value="{{.P.Post_id}}">
+      <div class = "comment-post-design">
+      <textarea name="commenttext"placeholder="Please, enter your comment.." type="submit"required></textarea>
+      </div>
+      <div class = "comment-button">
+      <button type="submit">Comment</button>
+      </div>
+    </form>
+    <!-- <h1>comments</h1> -->
+    {{range .Comments}}
+<div class="post-container2">  
+  <div class = "comment-icon">
+  </div>       
+   <div class="image-author-location">
+    <img class = "post-avatar"src="/img/person.svg">
+    <span class = "author">
+      {{.Commentername}}
+    </span>
+    </div>
+    <div class="posts">
+      {{.Commenttext}}
+    </div>
+  </div>
+  <div class = "display-like-dislike">
+    <form  action="/likecomment"method="post">
+      <div class = "like-dislike-button">
+            <button type="submit">Like</button>
+      </div>
+      <input type="hidden" name="comment" value="{{.Comment_id}}">
+      <input type="hidden" name="post" value="{{.CommentedPost_id}}">
+    </form>
+    <span class = "show-like">{{.Likes}}</span>
+    <form action="/dislikecomment"method="post">
+      <div class = "like-dislike-button">
+      <button type="submit">Dislike</button>
+      </div>
+      <input type="hidden" name="comment" value="{{.Comment_id}}">
+      <input type="hidden" name="post" value="{{.CommentedPost_id}}">
+    </form>
+  <span class = "show-like"> {{.Dislikes}}</span>
+    </div>
+    {{end}}
+  </body>
+  </html> 

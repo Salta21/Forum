@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <link rel="stylesheet" href = /style/display.css>
+    <link rel="icon" href="/img/icon.svg" type="images/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form action="/home" method="post">
+    <div class="top-design">
+        <a class = "homelink" href="/home">Home</a>
+        <a class = "login-button" href="/signup">Sign up</a>
+        <a class = "login-button-2" href="/signin">Sign in</a>
+    </div>
+        <div class = "category-buttons">
+          <button class="btn fifth" name = "content"  value="sales" type="submit">Sales</button>
+          <button class="btn fifth" name = "content"  value="holiday" type="submit">Holidays</button>
+          <button class="btn fifth" name = "content" value="facts" type="submit">Facts</button>
+          <button class="btn fifth" name = "content" value="events" type="submit">Events</button>
+          <button class="btn fifth" name = "content" value="quotes" type="submit">Quotes</button>
+          <button class="btn fifth" name = "content" value="books" type="submit">Books</button>
+          <button class="btn fifth" name = "content" value="guidesandtips" type="submit">Guides </button>
+        </div>
+          </form>
+          <div class="post-container">
+            <div class = "title"> 
+              {{.Title}}
+             </div>        
+             <div class="image-author-location">
+              <img class = "post-avatar"src="/img/person.svg">
+              <span class = "author">
+                {{.Author}}
+              </span>
+              </div>
+              <div class="posts">
+                {{.Posts}}
+              </div>
+          </div>
+          <div class = "display-like-dislike">
+              <div class = "like-dislike-button">
+                    <button disabled type="submit">Like</button>
+              </div>
+            <span class = "show-like">{{.Countliked}}</span>
+              <div class = "like-dislike-button">
+              <button disabled type="submit">Dislike</button>
+              </div>
+            <span class = "show-like"> {{.Countdisliked}}</span>
+            </div>
+            {{range .Forcomment}}
+        <div class="post-container2">  
+          <div class = "comment-icon">
+          </div>       
+           <div class="image-author-location">
+            <img class = "post-avatar"src="/img/person.svg">
+            <span class = "author">
+              {{.Commentername}}
+            </span>
+            </div>
+            <div class="posts">
+              {{.Commenttext}}
+            </div>
+          </div>
+          <div class = "display-like-dislike">
+            <form  action="/likecomment"method="post">
+              <div class = "like-dislike-button">
+                    <button disabled type="submit">Like</button>
+              </div>
+            </form>
+            <span class = "show-like">{{.Likes}}</span>
+            <form action="/dislikecomment"method="post">
+              <div class = "like-dislike-button">
+              <button disabled type="submit">Dislike</button>
+              </div>
+            </form>
+          <span class = "show-like"> {{.Dislikes}}</span>
+            </div>
+            {{end}}
+</body>
+</html>
