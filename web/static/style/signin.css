@@ -1,0 +1,214 @@
+*{
+  margin :0;
+}
+
+body {
+    background-color: rgb(245, 202, 214, 0.989);
+}
+
+.top-design {
+  overflow: hidden;
+  background-color: rgb(222, 222, 249);
+  border-bottom: 1px solid black;
+  height: 70px;
+}
+
+.homelink {
+  margin: 10px;
+  width: 70px;
+  font-weight: bold;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color:white;
+  cursor: pointer;
+  height:18px;
+  border-radius: 4px;
+  font-family: 'Source Code Pro', monospace; 
+  background-color:#8e44ad;
+}
+
+.login-button {
+  margin: 10px;
+  font-weight: bold;
+  height:18px;
+  position:fixed;
+  right:10px;
+  background-color: #8e44ad;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color:white;
+  cursor: pointer;
+  font-family: 'Source Code Pro', monospace; 
+  border-radius: 4px;
+}
+
+.quarter-back{
+background-color: rgb(245, 202, 214, 0.989);
+height:197px; 
+}
+
+.profile-icon {
+width: 210px;height: 200px;
+}
+
+.intro-text{
+margin-top: 20px;
+font-size: 20px;
+text-align: center;
+font-weight: bold;
+font-family:'Source Code Pro', monospace; 
+}
+
+.error-message{
+margin-top: 10px;
+font-size: 18px;
+text-align: center;
+color: rgb(233, 47, 47);
+}
+
+.signin-box {
+justify-content: center;
+margin: auto;
+text-align: center;
+margin-top: 20px;
+width: 500px;
+height: 100px;
+padding: 10px;
+}
+
+.authorization{
+margin-top: 20px;
+font-size: 20px;
+display: flex;
+text-align: center;
+padding: 10px;   
+background-color: rgb(222, 222, 249);
+border-radius: 10px;
+margin-bottom: 1px;
+font-family: 'Source Code Pro', monospace; 
+font-size: 15px;
+font-weight: bold;
+}
+
+input[type=text], input[type=password] {   
+  border-radius: 10px;
+  width: 100%;   
+  margin: 5px 0;  
+  padding: 12px 20px;   
+  display: inline-block;   
+  border: 2px solid rgb(222, 222, 249); 
+  box-sizing: border-box;   
+  font-family: 'Source Code Pro', monospace; 
+  font-size: 15px;
+} 
+
+.login button{
+  height: 40px;
+  width: 90px;
+  background-color: #8e44ad;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-family: 'Source Code Pro', monospace; 
+  font-size: 15px;
+  border-color: #8e44ad;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 412px){
+  .signin-box{
+    width: 200px;
+    font-size: 15px;
+    right:125px
+  }
+}
+
+@media (max-width: 800px){
+  .post-container{
+    margin-left: 4%;
+    width: 340px;
+  }
+  .post-container2{
+      margin-left: 4%;
+      width: 340px;
+  }
+  .login-button{
+    width: 75px;
+    font-size: 15px;
+  }
+  .homelink{
+    width: 75px;
+    font-size: 15px;
+  }
+  .profile-info{
+    margin-left: 3px;
+    font-size: 17px;
+  }
+  .error-message{
+    margin-left: 15px;
+  }
+  .more-link{
+    margin-left: 35%;
+  }
+  .display-like-dislike{
+      margin-left: 4%;
+  }
+  .comment-post-design textarea{
+      margin-left: 4%;
+      width: 340px;
+  }
+  .comment-button button{
+      margin-left: 4%;
+  }
+}
+@media (max-width: 510px){
+  .post-container{
+    margin-left: 4%;
+    width: 340px;
+  }
+  .post-container2{
+      margin-left: 4%;
+      width: 340px;
+  }
+  .login-button{
+    width: 75px;
+    font-size: 15px;
+  }
+  .homelink{
+    width: 75px;
+    font-size: 15px;
+  }
+  .profile-info{
+    margin-left: 3px;
+    font-size: 17px;
+  }
+  .error-message{
+    margin-left: 15px;
+  }
+  .more-link{
+    margin-left: 35%;
+  }
+  .display-like-dislike{
+      margin-left: 4%;
+  }
+  .comment-post-design textarea{
+      margin-left: 4%;
+      width: 340px;
+  }
+  .comment-button button{
+      margin-left: 4%;
+  }
+}
+@media (max-width: 510px){
+  .signin-box{
+    width: 200px;
+    font-size: 15px;
+    right:125px
+  }
+}

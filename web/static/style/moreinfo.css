@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+}
+
+h1 {
+
+    font-family: 'Source Code Pro', monospace; 
+    color: #313132;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 65%;
+}
+
+body {
+    background: rgba(245, 202, 214, 0.989);
+    cursor: pointer;
+}
+
+.login-container {
+    background-color:  rgba(245, 202, 214, 0.989);
+}
+
+.comments{
+    color: #302f2f;
+    font-style: oblique;
+    font-weight: bold; 
+    background-color: rgb(222, 222, 249);
+    padding: 15px; 
+    height:200px;
+    width: 600px;
+    border:double 4px rgb(89, 88, 86);
+    border-radius: 15px 50px 30px;
+    }
+
+.top-design {
+    overflow: hidden;
+    background-color: rgb(222, 222, 249);
+    border-bottom: 1px solid black;
+    height: 70px;
+}
+
+.homelink {
+    margin: 10px;
+    width: 70px;
+    font-weight: bold;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+    cursor: pointer;
+    height:18px;
+    border-radius: 4px;
+    font-family: 'Source Code Pro', monospace; 
+    background-color:#8e44ad;
+}
+
+.login-button {
+    margin: 10px;
+    height:18px;
+    font-weight: bold;
+    position:absolute;
+    right:10px;
+    background-color: #8e44ad;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+    cursor: pointer;
+    font-family: 'Source Code Pro', monospace; 
+    border-radius: 4px;
+}
+
+.profile-icon {
+    width: 210px;
+    height: 200px;
+}
+
+.post-container{
+    color:#49494d;
+    background-color: rgb(222, 222, 249);
+    padding: 20px; width: 600px;
+    margin-left: 40%;
+    border:double 2px #8e44ad;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-family: 'Source Code Pro', monospace; 
+}
+
+.post-container2{
+    color:#49494d;
+    background-color: rgb(222, 222, 249);
+    padding: 20px; width: 600px;
+    margin-left: 50%;
+    border:double 2px #8e44ad;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-family: 'Source Code Pro', monospace; 
+}
+
+.title{
+    margin: 0 0 10px;
+    font-size: 20px;
+    color:#49494d;
+    overflow: auto;
+    text-decoration: underline;
+}
+
+.post-avatar{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author{
+    font-weight: bold;
+    font-size: 25px;
+    color:#49494d;
+    margin-left: 10px;
+}
+
+.image-author-location{
+    display: flex;
+}
+
+.posts {
+    margin-top: 15px;
+    color:#49494d;
+    overflow: auto;
+}
+
+.display-contents{
+    margin-bottom: -30px;
+    font-weight: bold;
+    font-size: 25px;
+    color:  #8e44ad;
+    margin-top: 10px;
+    font-style: 'Source Code Pro', monospace; 
+}
+
+.display-like-dislike{
+    display:flex;
+    margin-left: 53%;
+    cursor: pointer;
+    color: white;
+    margin-top: 0.1%;
+}
+
+.like-dislike-button button{
+    margin-top: 1%;
+    cursor: pointer;
+    background-color: #8e44ad;
+    color: azure;
+    border-radius: 3px;
+    font-family:'Source Code Pro', monospace; 
+    font-weight:500;
+    border-color: #8e44ad;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.comment-post-design textarea{
+    margin-top: 40px;
+    margin-left: 50%;
+    font-family:'Source Code Pro', monospace; 
+    font-size: 17px;
+    color: #302f2f;
+    overflow: auto;
+    font-weight: bold; 
+    background-color: rgb(222, 222, 249);
+    padding: 20px; 
+    height:200px;
+    width: 600px;
+    border:double 2px #8e44ad;
+    border-radius: 10px;
+    resize: none;
+}
+
+.show-like{
+    font-weight: bold;
+    color:#8e44ad;
+}
+
+.comment-button button {
+    display:flex;
+    margin-left: 55%;
+    cursor: pointer;
+    background-color: #8e44ad;
+    border-radius: 3px;
+    font-family:'Source Code Pro', monospace; 
+    font-weight:500;
+    color: white;
+    border-color: #8e44ad;
+    margin-top: 0.1%;
+    border-color: #8e44ad;
+}
+
+.comment-icon img{
+    width:40px;
+    height:40px;
+}
+
+@media (max-width: 800px){
+    .post-container{
+      margin-left: 4%;
+      width: 300px;
+    }
+    .post-container2{
+        margin-left: 4%;
+        width: 300px;
+    }
+    .login-button{
+      width: 75px;
+      font-size: 15px;
+    }
+    .homelink{
+      width: 75px;
+      font-size: 15px;
+    }
+    .profile-info{
+      margin-left: 3px;
+      font-size: 17px;
+    }
+    .error-message{
+      margin-left: 15px;
+    }
+    .more-link{
+      margin-left: 35%;
+    }
+    .display-like-dislike{
+        margin-left: 4%;
+    }
+    .comment-post-design textarea{
+        margin-left: 4%;
+        width: 340px;
+    }
+    .comment-button button{
+        margin-left: 4%;
+    }
+}
+@media (max-width: 412px){
+    .post-container{
+      margin-left: 4%;
+      width: 340px;
+    }
+    .login-button{
+      width: 75px;
+      font-size: 15px;
+    }
+    .homelink{
+      width: 75px;
+      font-size: 15px;
+    }
+    .profile-info{
+      margin-left: 3px;
+      font-size: 17px;
+    }
+    .error-message{
+      margin-left: 15px;
+    }
+    .more-link{
+      margin-left: 70%;
+    }
+    .post-container{
+      margin-left: 3%;
+      width: 300px;
+  }
+  .display-like-dislike{
+    margin-left: 4%;
+}
+.comment-post-design textarea{
+    margin-left: 4%;
+    width: 300px;
+}
+.comment-button button{
+    margin-left: 4%;
+}
+}
+  
+@media (max-width: 360px){
+    .post-container{
+      margin-left: 3%;
+      width: 300px;
+    } 
+    .post-container{
+        margin-left: 3%;
+        width: 300px;
+    }
+    .display-like-dislike{
+      margin-left: 4%;
+  }
+  .comment-post-design textarea{
+      margin-left: 4%;
+      width: 300px;
+  }
+  .comment-button button{
+      margin-left: 4%;
+  }
+  
+}
+
+@media (max-width: 1080px){
+    .post-container{
+      margin-left: 3%;
+      width: 300px;
+    }
+    .post-container2{
+        margin-left: 3%;
+        width: 300px;
+    }
+    .login-button{
+      width: 75px;
+      font-size: 15px;
+    }
+    .homelink{
+      width: 75px;
+      font-size: 15px;
+    }
+    .profile-info{
+      margin-left: 3px;
+      font-size: 17px;
+    }
+    .error-message{
+      margin-left: 15px;
+    }
+    .more-link{
+      margin-left: 25%;
+    }
+    .display-like-dislike{
+        margin-left: 4%;
+    }
+    .comment-post-design textarea{
+        margin-left: 4%;
+        width: 340px;
+    }
+    .comment-button button{
+        margin-left: 4%;
+    }
+  }
